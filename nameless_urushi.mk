@@ -15,20 +15,23 @@
 # Inherit device configuration
 $(call inherit-product, device/semc/urushi/full_urushi.mk)
 
-# Inherit some common CM stuff.
-$(call inherit-product, vendor/cm/config/common_mini_phone.mk)
+# Inherit APNs list
+$(call inherit-product, vendor/nameless/config/apns.mk)
 
-# Optional CM packages
-PRODUCT_PACKAGES += \
-    Galaxy4 \
-    HoloSpiralWallpaper \
-    LiveWallpapers \
-    LiveWallpapersPicker \
-    MagicSmokeWallpapers \
-    NoiseField \
-    PhaseBeam \
-    VisualizationWallpapers \
-    PhotoTable
+# Inherit from the common Open Source product configuration
+$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
+
+# Inherit from our custom product configuration
+$(call inherit-product, vendor/nameless/config/common.mk)
+
+# Release name
+PRODUCT_RELEASE_NAME := urushi
+PRODUCT_NAME := nameless_urushi
+PRODUCT_GMS_CLIENTID_BASE := android-sonyericsson
+PRODUCT_DEVICE := urushi
+PRODUCT_BRAND := semc
+PRODUCT_MODEL := Xperia Arc
+PRODUCT_MANUFACTURER := SEMC
 
 # Set build fingerprint / ID / Product Name ect.
 PRODUCT_BUILD_PROP_OVERRIDES += \
@@ -36,13 +39,3 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     PRODUCT_DEVICE=ST18i \
     BUILD_FINGERPRINT="SEMC/ST18i_1254-2184/ST18i:4.0.4/4.1.B.0.587/tL1_3w:user/release-keys" \
     PRIVATE_BUILD_DESC="ST18i-user 4.0.4 4.1.B.0.587 tL1_3w test-keys"
-
-# Device identifier. This must come after all inclusions
-PRODUCT_NAME := cm_urushi
-PRODUCT_GMS_CLIENTID_BASE := android-sonyericsson
-
-# Release name
-PRODUCT_RELEASE_NAME := urushi
-
-# Custom tag for unofficial builds
-TARGET_UNOFFICIAL_BUILD_ID := LegacyXperia
