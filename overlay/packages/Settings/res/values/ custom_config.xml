@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <string-array name="maintainers" translatable="false">
+        <item>3andala</item>
+    </string-array>
+
+    <add-resource type="string" name="maintainers_3andala_name" />
+    <string name="maintainers_themaintainer_name">Eslam Mohamed</string>
+    <add-resource type="string" name="maintainers_3andala_github" />
+    <string name="maintainers_themaintainer_github">https://github.com/3andala</string>
+    <add-resource type="string" name="maintainers_3andala_email" />
+    <string name="maintainers_themaintainer_email">love3andala@gmail.com</string>
+
+</resources>
