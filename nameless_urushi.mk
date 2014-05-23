@@ -30,7 +30,7 @@ PRODUCT_NAME := nameless_urushi
 PRODUCT_GMS_CLIENTID_BASE := android-sonyericsson
 PRODUCT_DEVICE := urushi
 PRODUCT_BRAND := semc
-PRODUCT_MODEL := Xperia Arc
+PRODUCT_MODEL := Xperia Ray
 PRODUCT_MANUFACTURER := SEMC
 
 # Set build fingerprint / ID / Product Name ect.
